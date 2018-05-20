@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-data = pd.read_csv('datasets/df1.csv')
+data = pd.read_csv('../datasets/df1.csv')
 sns.set_style('darkgrid')
 
 

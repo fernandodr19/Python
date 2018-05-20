@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style('whitegrid')
 
-df = pd.read_csv('datasets/911.csv')
+df = pd.read_csv('../datasets/911.csv')
 
 # Create reason col
 df['Reason'] = df['title'].apply(lambda title: title.split(':')[0])
