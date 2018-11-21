@@ -1,16 +1,9 @@
 import pandas as pd
-import seaborn as sns
-
-import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.dates as matdates
 import matplotlib.ticker as ticker
-
-
 import datetime as dt
 
 fig, ax = plt.subplots()
-N = 100
 data = pd.read_csv('../datasets/teste.csv')
 dates = data['dateTime']
 
@@ -20,14 +13,16 @@ y = data['battery']
 
 ax.plot(x, y)
 
+#Define labels
 fig.suptitle('Battery benchmark', fontsize=20)
 plt.xlabel('Elapsed time (s)', fontsize=10)
 plt.ylabel('Remaining battery (%)', fontsize=10)
 
-
+#Define axis limits
 plt.xlim([x[0], x[len(x) - 1]])
 plt.ylim([y[len(y) - 1], y[0]])
 
+#Defines axis tickers interval
 ax.yaxis.set_major_locator(ticker.MultipleLocator(base=1.0))
 
 plt.subplots_adjust(bottom=0.5)
